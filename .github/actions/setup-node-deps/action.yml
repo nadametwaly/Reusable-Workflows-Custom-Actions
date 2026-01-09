@@ -2,7 +2,7 @@ name: "Setup Node & Install Dependencies"
 description: "Install Node.js, cache dependencies, and run npm install"
 
 inputs:
-  node_version:
+  node-version:
     description: "Node.js version"
     required: true
   cache_path:
