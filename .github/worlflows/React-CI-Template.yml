@@ -34,10 +34,10 @@ on:
         description: 'tag of the Docker image'
         required: true
         type: string
-      secrets:
-        docker_password:
-          description: 'Docker registry password'
-          required: true
+    secrets:
+      docker_password:
+        description: 'Docker registry password'
+        required: true
 
 jobs:
   ci:
