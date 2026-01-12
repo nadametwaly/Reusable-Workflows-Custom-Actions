@@ -1,6 +1,7 @@
 name: Docker Action Demo
 
 on:
+  push:
   workflow_dispatch:
 
 jobs:
