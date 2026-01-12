@@ -1,0 +1,17 @@
+name: Docker Custom Action
+description: Docker-based GitHub Action
+
+inputs:
+    message:
+        description: A message passed from the workflow
+        required: true
+        type: string
+
+outputs:
+  final_message:
+    description: the final message as a step output
+
+runs:
+  using: docker
+  image: Dockerfile
+  args: ${{ inputs.message }}

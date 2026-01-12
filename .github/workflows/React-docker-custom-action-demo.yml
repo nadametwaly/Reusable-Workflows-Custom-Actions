@@ -1,0 +1,20 @@
+name: Docker Action Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-docker-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run Docker Message Action
+        id: docker_message
+        uses: ./  
+        with:
+          message: "Hello World"
+
+      - name: Print output from Docker Action
+        run: echo "Step output final_message: ${{ steps.docker_message.outputs.final_message }}"
